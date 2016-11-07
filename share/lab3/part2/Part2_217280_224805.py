@@ -12,7 +12,6 @@ def abort():
   sys.exit(1)
 
 def read_PMUs(base_length):
-  base_length = 18
   increased_length = 0
 
   while True:
