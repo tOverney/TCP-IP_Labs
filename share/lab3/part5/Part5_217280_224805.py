@@ -11,13 +11,17 @@ def abort():
   sys.exit(1)
 
 def read_PMUs():
+  call_amnt = 0
 
   while True:
     data = websock.recv()
+    call_amnt += 1
     if data:
       print(data.decode("utf-8"))
     else:
       break
+
+  print("[INFO] Number of `recv` called: {}".format(call_amnt))
 
 def read_whole():
   acc = ""
