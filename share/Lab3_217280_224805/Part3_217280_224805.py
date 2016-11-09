@@ -26,7 +26,7 @@ def ping_server(af, message=MESSAGE, host=HOST, port=PORT):
         return (data, af)
 
 def run_iteration(pool):
-    for i in range(MAX_TRIES):
+    for i in range(1, MAX_TRIES):
         results = [pool.apply_async(ping_server,[sock]) for sock in [socket.AF_INET, socket.AF_INET6]]
         data = []
         for result in results:
@@ -40,7 +40,7 @@ if __name__ == '__main__':
     ack_index = []
     pool = Pool(multiprocessing.cpu_count())
 
-    for _ in range(200):
+    for _ in range(20):
         i, af = run_iteration(pool)
         print('{} after {} tries'.format(af,i))
         ack_index.append(i)        
