@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # This script clear the logs
-varpath='/home/lca2/Desktop/shared/labs/lab4/configs/r4'
+varpath='/home/lca2/Desktop/shared/lab4/configs/r4'
 
 rm $varpath/logs/zebra.log
 touch $varpath/logs/zebra.log
