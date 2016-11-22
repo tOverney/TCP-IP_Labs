@@ -51,7 +51,7 @@ def run():
     net.addLink( switches[3], switches[4])
 
     info( '*** Starting network\n')
-    net.start(delay=2) # delay=2
+    net.start() # delay=2
 
     info( '*** Running CLI\n' )
     CLI( net )

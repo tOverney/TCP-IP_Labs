@@ -3,7 +3,6 @@
 # This script clear the logs
 varpath='/home/lca2/Desktop/shared/lab4/configs/r1'
 
-echo "Hello"
 rm $varpath/logs/zebra.log
 touch $varpath/logs/zebra.log
 chmod 666 $varpath/logs/zebra.log

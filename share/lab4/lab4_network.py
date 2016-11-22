@@ -85,7 +85,6 @@ def run():
 # Cleanup function to be called when you quit the script
 def stopNetwork():
     "stops the network, cleans logs"
-    print("Cleaing up")
 
     if net is not None:
         info('** Tearing down Quagga network\n')
@@ -95,7 +94,6 @@ def stopNetwork():
             if host.name in ['h1','h2']:
                 pass
             else :
-                print(host.name)
                 host.cmd( "sh configs/%s/clean.sh" ) % host.name
         
         # This command stops the simulation
