@@ -39,7 +39,7 @@ class Lab4Topo(Topo):
         # Initialize the Quagga Service
         # autoStart=True (default) --> starts automatically quagga on the host
         # autoStop=True (default) --> stops automatically quagga (we don't want this)
-        quaggaSvc = QuaggaService(autoStart=True, autoStop=False) 
+        quaggaSvc = QuaggaService(autoStart=False, autoStop=False) 
 
         # Configuration file path for quagga routers
         # We require a "config" folder in the same path of the lab4_topo file, and within

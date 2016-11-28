@@ -512,3 +512,47 @@
 2016/11/22 22:08:23 ZEBRA: zebra message received [ZEBRA_IPV6_ROUTE_ADD] 41
 2016/11/22 22:08:23 ZEBRA: zebra message received [ZEBRA_IPV6_ROUTE_DELETE] 37
 2016/11/22 22:08:23 ZEBRA: zebra message received [ZEBRA_IPV6_ROUTE_ADD] 41
+2016/11/23 10:51:58 ZEBRA: Zebra 0.99.22.4 starting: vty@2601
+2016/11/23 10:51:58 ZEBRA: zebra message received [ZEBRA_HELLO] 1
+2016/11/23 10:51:58 ZEBRA: client 16 says hello and bids fair to announce only rip routes
+2016/11/23 10:51:58 ZEBRA: zebra message received [ZEBRA_ROUTER_ID_ADD] 0
+2016/11/23 10:51:58 ZEBRA: zebra message received [ZEBRA_INTERFACE_ADD] 0
+2016/11/23 10:51:58 ZEBRA: zebra message received [ZEBRA_HELLO] 1
+2016/11/23 10:51:58 ZEBRA: client 17 says hello and bids fair to announce only ripng routes
+2016/11/23 10:51:58 ZEBRA: zebra message received [ZEBRA_ROUTER_ID_ADD] 0
+2016/11/23 10:51:58 ZEBRA: zebra message received [ZEBRA_INTERFACE_ADD] 0
+2016/11/23 10:51:58 ZEBRA: zebra message received [ZEBRA_REDISTRIBUTE_ADD] 1
+2016/11/23 10:51:59 ZEBRA: zebra message received [ZEBRA_IPV4_ROUTE_ADD] 19
+2016/11/23 10:51:59 ZEBRA: zebra message received [ZEBRA_IPV4_ROUTE_ADD] 19
+2016/11/23 10:51:59 ZEBRA: zebra message received [ZEBRA_IPV4_ROUTE_ADD] 19
+2016/11/23 10:51:59 ZEBRA: zebra message received [ZEBRA_IPV4_ROUTE_ADD] 19
+2016/11/23 10:51:59 ZEBRA: zebra message received [ZEBRA_IPV4_ROUTE_DELETE] 19
+2016/11/23 10:51:59 ZEBRA: zebra message received [ZEBRA_IPV4_ROUTE_ADD] 19
+2016/11/23 10:51:59 ZEBRA: zebra message received [ZEBRA_IPV4_ROUTE_DELETE] 19
+2016/11/23 10:51:59 ZEBRA: zebra message received [ZEBRA_IPV4_ROUTE_ADD] 19
+2016/11/23 10:51:59 ZEBRA: zebra message received [ZEBRA_IPV4_ROUTE_DELETE] 19
+2016/11/23 10:51:59 ZEBRA: zebra message received [ZEBRA_IPV6_ROUTE_ADD] 41
+2016/11/23 10:51:59 ZEBRA: zebra message received [ZEBRA_IPV4_ROUTE_ADD] 19
+2016/11/23 10:51:59 ZEBRA: zebra message received [ZEBRA_IPV6_ROUTE_ADD] 41
+2016/11/23 10:51:59 ZEBRA: zebra message received [ZEBRA_IPV6_ROUTE_ADD] 41
+2016/11/23 10:51:59 ZEBRA: zebra message received [ZEBRA_IPV6_ROUTE_ADD] 41
+2016/11/23 10:51:59 ZEBRA: zebra message received [ZEBRA_IPV6_ROUTE_DELETE] 37
+2016/11/23 10:51:59 ZEBRA: zebra message received [ZEBRA_IPV6_ROUTE_ADD] 41
+2016/11/23 10:51:59 ZEBRA: zebra message received [ZEBRA_IPV6_ROUTE_DELETE] 37
+2016/11/23 10:51:59 ZEBRA: zebra message received [ZEBRA_IPV6_ROUTE_ADD] 41
+2016/11/23 10:51:59 ZEBRA: zebra message received [ZEBRA_IPV6_ROUTE_DELETE] 37
+2016/11/23 10:51:59 ZEBRA: zebra message received [ZEBRA_IPV6_ROUTE_ADD] 41
+2016/11/23 10:53:09 ZEBRA: zebra message received [ZEBRA_IPV4_ROUTE_DELETE] 19
+2016/11/23 10:53:09 ZEBRA: zebra message received [ZEBRA_IPV4_ROUTE_ADD] 19
+2016/11/23 10:53:09 ZEBRA: zebra message received [ZEBRA_IPV6_ROUTE_DELETE] 37
+2016/11/23 10:53:09 ZEBRA: zebra message received [ZEBRA_IPV4_ROUTE_DELETE] 19
+2016/11/23 10:53:09 ZEBRA: zebra message received [ZEBRA_IPV6_ROUTE_ADD] 41
+2016/11/23 10:53:09 ZEBRA: zebra message received [ZEBRA_IPV6_ROUTE_DELETE] 37
+2016/11/23 10:53:09 ZEBRA: zebra message received [ZEBRA_IPV4_ROUTE_DELETE] 19
+2016/11/23 10:53:09 ZEBRA: zebra message received [ZEBRA_IPV6_ROUTE_DELETE] 37
+2016/11/23 10:53:09 ZEBRA: zebra message received [ZEBRA_IPV4_ROUTE_DELETE] 19
+2016/11/23 10:53:09 ZEBRA: zebra message received [ZEBRA_IPV6_ROUTE_DELETE] 37
+2016/11/23 10:53:09 ZEBRA: zebra message received [ZEBRA_IPV6_ROUTE_DELETE] 37
+2016/11/23 10:53:09 ZEBRA: zebra message received [ZEBRA_IPV4_ROUTE_DELETE] 19
+2016/11/23 10:53:09 ZEBRA: zebra message received [ZEBRA_IPV4_ROUTE_DELETE] 19
+2016/11/23 10:53:09 ZEBRA: zebra message received [ZEBRA_IPV6_ROUTE_DELETE] 37
