@@ -61,12 +61,10 @@ def run():
     
     info('\n** Adding Hosts\n')
     h1 = net.addHost('h1', ip='10.10.0.1/24', hostname='h1',  privateLogDir=True, privateRunDir=True, inMountNamespace=True, inPIDNamespace=True, inUTSNamespace=True)
-    # Space to add any commands for configuring the IP addresses
-    #
-    #
-    #
-    #
-  
+    h2 = net.addHost('h2', ip='10.10.0.2/24', hostname='h2',  privateLogDir=True, privateRunDir=True, inMountNamespace=True, inPIDNamespace=True, inUTSNamespace=True)
+    h3 = net.addHost('h3', ip='10.10.1.3/24', hostname='h3',  privateLogDir=True, privateRunDir=True, inMountNamespace=True, inPIDNamespace=True, inUTSNamespace=True)
+    r1 = net.addHost('r1', ip='10.10.0.10/24', hostname='r1',  privateLogDir=True, privateRunDir=True, inMountNamespace=True, inPIDNamespace=True, inUTSNamespace=True)
+    
     info('\n** Adding Switches\n')
     # Adding switches to the network
     sw1 = net.addSwitch('sw1')
@@ -95,7 +93,7 @@ def run():
  		enable_red = False,
  		max_queue_size = None 
     """
-    link_r1sw2.intf1.config( bw=10)
+    link_r1sw2.intf1.config(bw=3, enable_ecn=True)
     
     
     net.start()
@@ -104,10 +102,10 @@ def run():
     info( '*** Configuring hosts\n' )
     r1.cmd('ifconfig r1-eth1 10.10.1.10 netmask 255.255.255.0')
     # Space to add commands for configuring routing tables and default gateways
-    #
-	#
-	#
-	#
+    r1.cmd('echo 1 > /proc/sys/net/ipv4/ip_forward')
+    h1.cmd('ip route add default via 10.10.0.10')
+    h2.cmd('ip route add default via 10.10.0.10')
+    h3.cmd('ip route add default via 10.10.1.10')
     
     info('** Executing custom commands\n')
     output = net.nameToNode.keys

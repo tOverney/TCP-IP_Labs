@@ -115,17 +115,30 @@ def run():
     r3.cmd('echo 1 > /proc/sys/net/ipv4/ip_forward')
 
     # Space to add any customize command before prompting command line
-    # 
-    #
-    #
-    #
-
+    h1.cmd('ip route add default via 10.0.0.10')
+    h2.cmd('ip route add default via 10.0.0.10')
+    h3.cmd('ip route add default via 10.0.3.30')
+    
+    r1.cmd('ip route add default via 10.0.1.20')
+    r2.cmd('ip route add 10.0.0.0/23 via 10.0.1.10')
+    r2.cmd('ip route add 10.0.2.0/23 via 10.0.2.30')
+    r3.cmd('ip route add default via 10.0.2.20')
+    
     r1.cmd('tc qdisc add dev r1-eth1 root handle 1: cbq avpkt 1000 bandwidth 60mbit')
     r1.cmd('tc class add dev r1-eth1 parent 1: classid 1:1 cbq rate 2mbit allot 1500 prio 5 bounded isolated')
     r1.cmd('tc class add dev r1-eth1 parent 1: classid 1:2 cbq rate 20mbit allot 1500 prio 5 bounded isolated')
     r1.cmd('tc filter add dev r1-eth1 protocol ip parent 1: prio 16 u32 match ip src 10.0.0.1 flowid 1:1')
     r1.cmd('tc filter add dev r1-eth1 protocol ip parent 1: prio 16 u32 match ip src 10.0.0.2 flowid 1:2')
 
+    r2.cmd('tc qdisc add dev r2-eth1 root handle 1: cbq avpkt 1000 bandwidth 60mbit')
+    r2.cmd('tc class add dev r2-eth1 parent 1: classid 1:1 cbq rate 2.5mbit allot 1500 prio 5 bounded isolated')
+    r2.cmd('tc filter add dev r2-eth1 protocol ip parent 1:  prio 16 u32 match ip src 0/0 flowid 1:1')
+
+    r3.cmd('tc qdisc add dev r3-eth1 root handle 1: cbq avpkt 1000 bandwidth 60mbit')
+    r3.cmd('tc class add dev r3-eth1 parent 1: classid 1:1 cbq rate 20mbit allot 1500 prio 5 bounded isolated')
+    r3.cmd('tc class add dev r3-eth1 parent 1: classid 1:2 cbq rate 0.5mbit allot 1500 prio 5 bounded isolated')
+    r3.cmd('tc filter add dev r3-eth1 protocol ip parent 1: prio 16 u32 match ip src 10.0.0.1 flowid 1:1')
+    r3.cmd('tc filter add dev r3-eth1 protocol ip parent 1: prio 16 u32 match ip src 10.0.0.2 flowid 1:2')
 
     # Space to add any customize command before prompting command line
     #

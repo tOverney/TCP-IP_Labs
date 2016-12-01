@@ -63,7 +63,7 @@ def run():
     h1 = net.addHost('h1', ip='10.10.0.1/24', hostname='h1',  privateLogDir=True, privateRunDir=True, inMountNamespace=True, inPIDNamespace=True, inUTSNamespace=True)
     h2 = net.addHost('h2', ip='10.10.0.2/24', hostname='h2',  privateLogDir=True, privateRunDir=True, inMountNamespace=True, inPIDNamespace=True, inUTSNamespace=True)
     h3 = net.addHost('h3', ip='10.10.1.3/24', hostname='h3',  privateLogDir=True, privateRunDir=True, inMountNamespace=True, inPIDNamespace=True, inUTSNamespace=True)
-    r1 = net.addHost('r1', ip='10.10.0.10/24', hostname='r1',  privateLogDir=True, privateRunDir=True, inMountNamespace=True, inPIDNamespace=True, inUTSNamespace=True)
+    r1 = net.addHost('r1', ip='10.10.0.10/24', hostname='r1', privateLogDir=True, privateRunDir=True, inMountNamespace=True, inPIDNamespace=True, inUTSNamespace=True)
 
     info('\n** Adding Switches\n')
     # Adding switches to the network
@@ -96,6 +96,7 @@ def run():
     
     #Commands here for bandwidth and queue size
     
+    link_r1sw2.intf1.config( bw=5, max_queue_size=1000)
     
     net.start()
     

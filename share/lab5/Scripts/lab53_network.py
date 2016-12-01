@@ -100,8 +100,14 @@ def run():
  		enable_red = False,
  		max_queue_size = None 
     """
-    # Specify bandwidth and enable ECN   
+    # Specify bandwidth and enable ECN  
 
+    link_r1sw1.intf1.config(enable_ecn=True)
+    link_r1sw2.intf1.config(bw=2, enable_ecn=True)
+    link_r2sw2.intf1.config(enable_ecn=True)
+    link_r2sw3.intf1.config(bw=2, enable_ecn=True)
+    link_r2sw4.intf1.config(enable_ecn=True)
+            
 
 
     net.start()
@@ -113,13 +119,23 @@ def run():
     r2.cmd('ifconfig r2-eth1 10.0.2.20 netmask 255.255.255.0')
     r2.cmd('echo 1 > /proc/sys/net/ipv4/ip_forward')
     
+    
     # Specify routing commands and delay configurations
-    #
-    #
-    #
+    h1.cmd('ip route add default via 10.0.1.10')
+    h2.cmd('ip route add default via 10.0.2.20')
+    h3.cmd('ip route add default via 10.0.3.20')
+    
+    r1.cmd('ip route add default via 10.0.10.20')
+    r2.cmd('ip route add default via 10.0.10.10')
+    
+    h1.cmd('tc qdisc add dev h1-eth0 root netem delay 100ms')
+    h2.cmd('tc qdisc add dev h2-eth0 root netem delay 100ms')
+    h3.cmd('tc qdisc add dev h3-eth0 root netem delay 100ms')
+    
+
     info('** Executing custom commands\n')
     output = net.nameToNode.keys
-  
+    
    
    
     
