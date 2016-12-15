@@ -52,7 +52,7 @@ class Lab6Topo(Topo):
         netHosts.append(NetworkHosts(name='r3', IP='192.13.13.3/24', DG=''))
         netHosts.append(NetworkHosts(name='r4', IP='192.24.24.4/24', DG=''))
         netHosts.append(NetworkHosts(name='r5', IP='192.50.50.5/24', DG=''))
-	
+
         for host in netHosts:
 	        # We create a list of node names
             NodeList.append(host.name)
